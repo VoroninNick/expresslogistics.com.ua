@@ -1,0 +1,40 @@
+<div class="row">
+  <% @services.each do |item| %>
+      <div class="span12 service-listing-full-width <%= cycle('left-service', 'right-service') %>">
+        <div class="service-img <%#= cycle('left-service' , 'right-service') %>">
+          <%= image_tag(item.icon_main.url, :class => "", :style => "width: 100%;", :alt => "#{item.name}", :title => "#{item.name}") %>
+        </div>
+        <div class="service-descr ">
+          <h3>
+            <% if cookies[:language] == "eng" %>
+              <%= link_to(truncate(item.name_eng, :length => 42, :omission => '...'), "/services/#{item.id}", :class => "service-links", :title => "#{item.name_eng}") %>
+            <% elsif cookies[:language] == "rus"  %>
+              <%= link_to(truncate(item.name_rus, :length => 42, :omission => '...'), "/services/#{item.id}", :class => "service-links", :title => "#{item.name_rus}") %>
+            <% elsif cookies[:language] == "ukr"  %>
+              <%= link_to(truncate(item.name_ukr, :length => 42, :omission => '...'), "/services/#{item.id}", :class => "service-links", :title => "#{item.name_ukr}") %>
+            <% elsif cookies[:language] == "de"  %>
+              <%= link_to(truncate(item.name_de, :length => 42, :omission => '...'), "/services/#{item.id}", :class => "service-links", :title => "#{item.name_de}") %>
+            <% else %>
+              <%= link_to(truncate(item.name, :length => 42, :omission => '...'), "/services/#{item.id}", :class => "service-links", :title => "#{item.name}") %>
+            <% end %>
+          </h3>
+          <% if cookies[:language] == "eng" %>
+            <p><%= truncate(item.intro_eng, :length => 340, :omission => '...') %></p>
+            <p class="news-home-link"><%= link_to("", "/services/#{item.id}", :class => "service-links rm-border", :title => "#{item.name_eng}") %></p></div>
+          <% elsif cookies[:language] == "rus"  %>
+            <p><%= truncate(item.intro_rus, :length => 340, :omission => '...') %></p>
+            <p class="news-home-link"><%= link_to("", "/services/#{item.id}", :class => "service-links rm-border", :title => "#{item.name_rus}") %></p></div>
+          <% elsif cookies[:language] == "ukr"  %>
+            <p><%= truncate(item.intro_ukr, :length => 340, :omission => '...') %></p>
+            <p class="news-home-link"><%= link_to("", "/services/#{item.id}", :class => "service-links rm-border", :title => "#{item.name_ukr}") %></p></div>
+          <% elsif cookies[:language] == "de"  %>
+            <p><%= truncate(item.intro_de, :length => 340, :omission => '...') %></p>
+            <p class="news-home-link"><%= link_to("", "/services/#{item.id}", :class => "service-links rm-border", :title => "#{item.name_de}") %></p></div>
+          <% else %>
+            <p><%= truncate(item.intro, :length => 340, :omission => '...') %></p>
+            <p class="news-home-link"><%= link_to("", "/services/#{item.id}", :class => "service-links rm-border", :title => "#{item.name}") %></p></div>
+          <% end %>
+
+      </div> <!-- service -->
+  <% end %>
+</div><!-- row -->

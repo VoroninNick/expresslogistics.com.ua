@@ -1,0 +1,39 @@
+<div class="container news-item-pad">
+  <div class="row">
+    <div class="span4 news-item-make-full">
+      <%= image_tag(@news_item.avatar.url(:main), :class => "news-item-img", :style => "", :alt => "#{@news_item.name}") %>
+    </div>
+    <div class="span8 news-item-make-full">
+      <h1 class="news-item-h1"><%= @news_item.name %></h1>
+      <p class="news-descr-small"><%= @news_item.intro_text.html_safe %></p>
+      <p class="news-descr-full"><%= @news_item.first_paragraph.html_safe %></p>
+      <p class="quote-proverb news-quote"><span class="quote-icon">&nbsp;</span><i><%= @news_item.proverb.html_safe %></i></p>
+      <p class="news-descr-full"><%= @news_item.second_paragraph.html_safe %></p>
+      <p class="news-img-p"><%= image_tag(@news_item.avatar.url(:main), :class => "news-item-img", :style => "", :alt => "#{@news_item.name}") %></p>
+      <p class="news-descr-full"><%= @news_item.third_paragraph.html_safe %></p>
+      <% if @news_item.photo? %>
+      <p><h3 style="color: #F27321;">Галерея</h3></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% if @news_item.photo? %>
+<div class="container news-gallerys">
+  <div class="row">
+    <div class="span4">&nbsp;</div>
+    <% @news_item.photo.each do |image| %>
+      <div class="span2 <%= cycle("first_news_child", "", "", "last_news_child") %>">
+          <%= link_to image_tag(image.url(:big), :class => "news-item-img"), image.url(:fancy), :class => "fancybox ", :rel => "gallery_news" %> 
+      </div>
+    <% end %>
+  </div>
+</div>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="span4">&nbsp;</div>
+    <div class="span8">
+      <p class="news-material-used"><%= @news_item.last_paragraph.html_safe %></p>
+    </div>
+  </div>
+</div>

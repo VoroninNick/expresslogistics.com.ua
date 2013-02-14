@@ -1,0 +1,89 @@
+<%= render :partial => 'partials/head' %>
+<div id="services" class="background-randoms">
+  <%= render :partial => 'partials/infobar' %>
+  <div class="container service-proverb">
+    <div class="row">
+      <div class="span8">
+        <h2 class="services-h2"><%= container :services_h2 %></h2>
+        <p class="services-p"><%= container :services_p %></p>
+      </div>
+    </div>
+  </div> <!-- container service-proverb -->
+  <div class="container service-listing">
+    <%#= container :services_category %>
+
+      <style type="text/css">
+        .get-back-tous > p{
+          float: left;
+          width: 970px;
+          height: 75px;
+        }
+
+        .get-back-tous p > label{
+          padding-left: 15px;
+        }
+
+        .get-back-tous p.third-glue{
+          width: 310px !important;
+          margin-right: 20px;
+        }
+
+        .get-back-tous p.third-glue.last{
+          margin-right: 0;
+        }
+        .get-text, .get-text > textarea{
+          height: 240px !important;
+        }
+      </style>
+
+    <div class="row">
+      <div class="span10 get-back-tous">
+        <!--<h2 class="services-h2">Заказать</h2>-->
+        <p>
+          <input type="text" id="name" placeholder="ТзОВ «Транс-Сервіс-1»" autofocus>
+          <label for="name">Назва фірми – замовника :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="Михаил Михаиловичь">
+          <label for="">Контактна особа :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="Фура">
+          <label for="">Тип транспортного засобу :</label>
+        </p>
+        <p>
+          <input type="text" style="width: 48%;" placeholder="Львов"> &nbsp;&mdash;&nbsp; <input type="text" style="width: 48%;" placeholder="Киев">
+          <label for="">Маршрут перевезення (Звідки&nbsp;&mdash;&nbsp;куди) :</label>
+        </p>
+
+        <p class="third-glue">
+          <input type="text" placeholder="15 км">
+          <label for="">Відстань перевезення :</label>
+        </p>
+        <p class="third-glue">        
+          <input type="text" placeholder="120 л">
+          <label for="">Об'єм перевезення :</label>
+        </p>
+        <p class="third-glue last">
+          <input type="date" placeholder="23/01/2013">
+           <label for="">Орієнтовна дата перевезення :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="+38 (050) 000 000 00">
+          <label for="">Контактний телефон * :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="support@service.com">
+          <label for="">E-mail :</label>
+        </p>
+        <p class="get-text">
+          <textarea ></textarea>
+          <label for="">Додаткові побажання замовника :</label>
+        </p>
+        <div style="text-align: right;float: right;"><a href="#"><img src="assets/send.png" alt=""></a></div>
+      </div>
+    </div>
+  </div> <!-- container service-listing -->
+</div>
+<%= render :partial => 'partials/sponsor' %>
+<%= render :partial => 'partials/foot' %>

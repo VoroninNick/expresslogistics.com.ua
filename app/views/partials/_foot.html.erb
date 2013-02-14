@@ -1,0 +1,105 @@
+  </div><!-- main -->
+  </div><!-- wrap -->
+  <div id="footer" class="container">
+    <div class="row">
+      <div class="span6">
+        <p class="copyrigths">
+          <% if cookies[:language] == "eng" %>
+            &copy; 2012 «Expres Logistic». All rights reserved.
+          <% elsif cookies[:language] == "rus" %>
+            &copy; 2012  ТзОВ «Експрес Логистик». Все права защищены.
+          <% elsif cookies[:language] == "ukr" %>
+            &copy; 2012  ТзОВ «Експрес Логістик». Всі права захищені.
+          <% elsif cookies[:language] == "de" %>
+            &copy; 2012 «Expres Logistic». Alle Rechte vorbehalten.
+          <% else %>
+            &copy; 2012  ТзОВ «Експрес Логистик». Все права защищены.
+          <% end %>
+        </p>
+        <div class="copy-studio">
+          <img src=" <%= asset_path('vs-logo.png') %>" alt="">
+          <% if cookies[:language] == "eng" %>
+          <p>
+            Handcrafted by  <a href="http://voroninstudio.eu">Voronin Design Studio</a> <br>
+            in 2012. <a href="http://voroninstudio.eu">Information.</a>
+          </p>
+          <% elsif cookies[:language] == "rus"  %>
+          <p>
+            Сделано <a href="http://voroninstudio.eu">дизайн студией Н. Воронина</a> <br>
+            в 2012 году. <a href="http://voroninstudio.eu">Информация о сайте</a>
+          </p>
+          <% elsif cookies[:language] == "ukr"  %>
+          <p>
+            Зроблено <a href="http://voroninstudio.eu">дизайн студією М. Вороніна</a> <br>
+            в 2012 році. <a href="http://voroninstudio.eu">Інформація про сайт</a>
+          </p>
+          <% elsif cookies[:language] == "de"  %>
+          <p>
+            Handcrafted by  <a href="http://voroninstudio.eu">Voronin Design Studio</a> <br>
+            in 2012. <a href="http://voroninstudio.eu">Information.</a>
+          </p>
+          <% else %>
+          <p>
+            Сделано <a href="http://voroninstudio.eu">дизайн студией Н. Воронина</a> <br>
+            в 2012 году. <a href="http://voroninstudio.eu">Информация о сайте</a>
+          </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="span6">
+        <ul class="foot-menu">
+          <% if cookies[:language] == "eng" %>
+            <li><a href="/about"><span class="proper-link">about</a></span></li>
+            <li><a href="/orders"><span class="proper-link">orders</a></span></li>
+            <li><a href="/services"><span class="proper-link">services</a></span></li>
+            <li><a href="/news"><span class="proper-link">news</a></span></li>
+            <li><a href="/contact-us"><span class="proper-link">contacts</a></span></li>
+          <% elsif cookies[:language] == "rus"  %>
+            <li><a href="/about"><span class="proper-link">о компании</a></span></li>
+            <li><a href="/orders"><span class="proper-link">заказать</a></span></li>
+            <li><a href="/services"><span class="proper-link">услуги</a></span></li>
+            <li><a href="/news"><span class="proper-link">анонсы</a></span></li>
+            <li><a href="/contact-us"><span class="proper-link">контакты</a></span></li>
+          <% elsif cookies[:language] == "ukr"  %>
+            <li><a href="/about"><span class="proper-link">про компанію</span></a></span></li>
+            <li><a href="/orders"><span class="proper-link">замовити</a></span></li>
+            <li><a href="/services"><span class="proper-link">послуги</a></span></li>
+            <li><a href="/news"><span class="proper-link">анонси</a></span></li>
+            <li><a href="/contact-us"><span class="proper-link">контакти</a></span></li>
+          <% elsif cookies[:language] == "de"  %>
+            <li style="margin-right: 10px;"><a href="/about" style="padding-right: 10px;"><span class="proper-link">firma</a></span></li>
+            <li style="margin-right: 10px;"><a href="/orders" style="padding-right: 10px;"><span class="proper-link">unserem park</a></span></li>
+            <li style="margin-right: 10px;"><a href="/services" style="padding-right: 10px;"><span class="proper-link">dienstleistungen</a></span></li>
+            <li style="margin-right: 10px;"><a href="/news" style="padding-right: 10px;"><span class="proper-link">ankündigungen</a></span></li>
+            <li style="margin-right: 0px;"><a href="/contact-us" style="padding-right: 0px;"><span class="proper-link">kontakte</a></span></li>
+          <% else %>
+            <li><a href="/about"><span class="proper-link">о компании</a></span></li>
+            <li><a href="/orders"><span class="proper-link">заказать</a></span></li>
+            <li><a href="/services"><span class="proper-link">услуги</a></span></li>
+            <li><a href="/news"><span class="proper-link">анонсы</a></span></li>
+            <li><a href="/contact-us"><span class="proper-link">контакты</a></span></li>
+          <% end %>
+        </ul>
+        <div class="foot-contacts">
+          <% if cookies[:language] == "eng" %>
+            with. Stavchany, Pustomyty district., Lviv region., Ukraine, 81118 <br>
+            tel.: <span class="orange tel">+38 (032) 237 40 61</span>
+          <% elsif cookies[:language] == "rus"  %>
+            с. Ставчаны, Пустомытовськой р-н., Львовськая обл., Украина, 81118 <br>
+            тел.: <span class="orange tel">+38 (032) 237 40 61</span>
+          <% elsif cookies[:language] == "ukr"  %>
+            с. Ставчани, Пустомитівський р-н., Львівська обл., Україна, 81118 <br>
+            тел.: <span class="orange tel">+38 (032) 237 40 61</span>
+          <% elsif cookies[:language] == "de"  %>
+            mit. Stavchany, Pustomyty Bezirk., Lviv Region., Ukraine, 81118 <br>
+            tel.: <span class="orange tel">+38 (032) 237 40 61</span>
+          <% else %>
+            с. Ставчаны, Пустомытовськой р-н., Львовськая обл., Украина, 81118 <br>
+            тел.: <span class="orange tel">+38 (032) 237 40 61</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

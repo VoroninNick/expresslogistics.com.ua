@@ -1,0 +1,13 @@
+<div id="sponsors-list">
+  <div class="container">
+    <div class="row">
+      <% @sponsors.each do |item| %>
+        <div class="span3 sponsors-each">
+          <a href="<%= item.link %>" class="sponsor-link-d" title="<%= item.name %>">
+            <%= image_tag(item.logo.url, :class => "", :style => "") %>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div><!-- sponsors-list -->

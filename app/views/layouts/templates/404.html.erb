@@ -1,0 +1,68 @@
+<%= render :partial => 'partials/head' %>
+
+
+
+<div id="about" class="404">
+<%= render :partial => 'partials/infobar' %>
+
+
+
+<div class="container a404-padding-me_Oo">
+  <div class="row">
+    <div class="span6 a404-full-width">
+      <h1 class="a404-h1">Страница пропавших ссылок</h1>
+      <p class="a404-p">К сожалению, Вы пропали на несуществующей странице. И мы нечего с этим не можем поделать.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container a404-no-worrys-frIends">
+  <div class="row">
+    <div class="span2 a404-full-width-hIde_mE">&nbsp;</div>
+    <div class="span8 a404-full-width">
+      <img src="<%= asset_path('404_arrow.png') %>" alt="" class="pull-left a404img">
+      <p class="a404-error-text">
+        Но мы точно знаем, что в наших руках Ваш груз негде не пропадёт ;)
+      </p>
+    </div>
+    <div class="span2 a404-full-width-hIde_mE">&nbsp;</div>
+  </div>
+</div>
+
+<div class="container a404-padding-me_Oo a404-heavy-padding">
+  <div class="row">
+    <div class="span2 a404-full-width-hIde_mE">&nbsp;</div>
+    <div class="span8 a404-full-width">
+      <div class="a404-menu-item pull-left">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img">
+        <a href="/">
+          <span class="proper-link">Главная</span>
+        </a>
+      </div>
+      <div class="a404-menu-item pull-left">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img">
+        <a href="/services">
+          <span class="proper-link">Услуги</span>
+        </a>
+      </div>
+      <div class="a404-menu-item pull-left">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img">
+        <a href="/contacts-us">
+          <span class="proper-link">Контакты</span>
+        </a>
+      </div>
+    </div>
+    <div class="span2 a404-full-width-hIde_mE">&nbsp;</div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+<%= render :partial => 'partials/sponsor' %>
+<%= render :partial => 'partials/foot' %>

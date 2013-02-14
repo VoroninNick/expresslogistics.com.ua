@@ -1,0 +1,10 @@
+
+<p><b>Name:</b> <%= @content_block.name %></p>
+<p><b>Intro Text:</b> <%= @content_block.intro_text %></p>
+<p><b>First Paragraph:</b> <%= @content_block.first_paragraph %></p>
+<p><b>Proverb:</b> <%= @content_block.proverb %></p>
+<p><b>Second Paragraph:</b> <%= @content_block.second_paragraph %></p>
+<p><b>Third Paragraph:</b> <%= @content_block.third_paragraph %></p>
+<p><b>Last Paragraph:</b> <%= @content_block.last_paragraph %></p>
+<p><b>Avatar:</b> <%= link_to "Avatar", attachment_path_for(@content_block.avatar) %></p>
+<p><b>Attachments:</b> <%= attachment_viewer @content_block %></p>

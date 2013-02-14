@@ -1,0 +1,21 @@
+      <div id="news-home">
+        <div class="container">
+          <div class="row">
+          <h2 class="news-home-h2">Последние анонсы</h2>
+            <% @news_home.each do |item| %>
+            <div class="span6 news-full">
+              <div class="news-home-img">
+                <%= image_tag(item.avatar.url(:cat), :class => "", :style => "width: 100%;", :alt => "#{item.name}", :title => "#{item.name}") %>
+              </div>
+              <div class="news-home-descr">
+                <h3><%= link_to(truncate(item.name, :length => 58, :omission => '...'), "/news/#{item.id}", :class => "service-links", :title => "#{item.name}") %></h3>
+                <!-- <p class="news-home-date"><i>13.08.2012</i></p> -->
+                <p class="news-home-main-p"><%= truncate(item.intro_text, :length => 144, :omission => '...') %></p>
+                <p class="news-home-link"><a href="/news/<%= item.id %>" title="<%= item.name %>"></a></p>
+              </div>
+            </div>
+            <% end %>
+            <div class="span12 news-all-link"><a href="/news" title="Анонсы от «Express logistics»"></a></div>
+          </div>
+        </div>
+      </div><!-- news-home -->

@@ -1,0 +1,92 @@
+<%= render :partial => 'partials/head' %>
+
+<div id="about" class="background-randoms">
+  <%= render :partial => 'partials/infobar' %>
+  <div class="container about-proverb">
+    <div class="row">
+      <div class="span12">
+        <h2 class="about-h2"><%= container :about_h2 %></h2>
+      </div>
+      <div class="span4" style="text-align: center;">
+        <%= image_tag('logo-symbol-only.png', :alt => "", :style => "border: 0px solid rgba(239, 239, 239, 1);") %>
+      </div>
+      <div class="span8 about-us-full-width js-txt-a" id="about-pr-container">
+        <p class="about-p "><%= container :about_p %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="span12 txt-center">
+
+
+
+
+        <% if cookies[:language] == "ukr" %>
+          <p class="quote-proverb">
+            <span class="quote-icon">&nbsp;</span>
+            <i>
+              Наше завдання – організувати всі операції максимально надійно, якісно, оперативно та за доступними цінами.
+            </i></p>
+        <% elsif cookies[:language] == "rus" %>
+          <p class="quote-proverb">
+            <span class="quote-icon">&nbsp;</span>
+            <i>
+              Наша задача — организовать все операции максимально надежно, качественно, оперативно и по доступным ценам.
+            </i></p>
+        <% elsif cookies[:language] == "eng" %>
+
+        <% elsif cookies[:language] == "de" %>
+
+        <% else %>
+          <p class="quote-proverb js-txt-a">
+            <span class="quote-icon">&nbsp;</span>
+            <i>
+              Наша задача — организовать все операции максимально надежно, качественно, оперативно и по доступным ценам.
+            </i></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+<div class="container about-listing">
+  <div class="row">
+    <div class="span4 about-us-full-width js-txt-a" id="about-np">
+      <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img" style="top: 22px !important;"><% if cookies[:language] == "eng" %><h2 class="about-h2">Our mission</h2><% elsif cookies[:language] == "rus"  %><h2 class="about-h2">Наша цель</h2><% elsif cookies[:language] == "ukr"  %><h2 class="about-h2">Наша ціль</h2><% elsif cookies[:language] == "de"  %><h2 class="about-h2">Unsere Aufgabe</h2><% else %><h2 class="about-h2">Наша цель</h2><% end %>
+      <p class="about-p "><%= container :about_p1 %></p>
+    </div>
+    <div class="span4 about-us-full-width js-txt-a" id="about-np">
+      <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img" style="top: 22px !important;"><% if cookies[:language] == "eng" %><h2 class="about-h2">Dynamic progresses</h2><% elsif cookies[:language] == "rus"  %><h2 class="about-h2">Динамика развития</h2><% elsif cookies[:language] == "ukr"  %><h2 class="about-h2">Динаміка розвитку</h2><% elsif cookies[:language] == "de"  %><h2 class="about-h2">Das Speditionsunternehmen</h2><% else %><h2 class="about-h2">Динамика развития</h2><% end %>
+      <p class="about-p "><%= container :about_p2 %></p>
+    </div>
+    <div class="span4 about-us-full-width js-txt-a" id="about-np">
+      <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img" style="top: 22px !important;"><% if cookies[:language] == "eng" %><h2 class="about-h2">Individual approach</h2><% elsif cookies[:language] == "rus"  %><h2 class="about-h2">Индивидуальность</h2><% elsif cookies[:language] == "ukr"  %><h2 class="about-h2">Індивідуальний підхід</h2><% elsif cookies[:language] == "de"  %><h2 class="about-h2">Kundenorientierter Service</h2><% else %><h2 class="about-h2">Индивидуальность</h2><% end %>
+      <p class="about-p "><%= container :about_p3 %></p>
+    </div>
+  </div>
+</div>
+
+  <div class="container about-listing">
+    <div class="row">
+      <div class="span4" style="text-align: center;">
+        <img src="http://invest.voroninstudio.eu/img/t/tm_1.jpg" alt="" style="border: 2px solid rgba(239, 239, 239, 1);">
+        <p>Marko Polo</p>
+        <p></p>
+      </div>
+      <div class="span4">
+        <img src="http://invest.voroninstudio.eu/img/t/tm_2.jpg" alt="" style="border: 2px solid rgba(239, 239, 239, 1);">
+        <p>Marko Polo</p>
+        <p></p>
+      </div>
+      <div class="span4">
+        <img src="http://invest.voroninstudio.eu/img/t/tm_3.jpg" alt="" style="border: 2px solid rgba(239, 239, 239, 1);">
+        <p>Marko Polo</p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+
+<%= render :partial => 'partials/sponsor' %>
+<%= render :partial => 'partials/foot' %>

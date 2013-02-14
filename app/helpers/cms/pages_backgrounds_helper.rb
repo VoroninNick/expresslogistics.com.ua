@@ -1,0 +1,2 @@
+module Cms::PagesBackgroundsHelper
+end

@@ -1,0 +1,102 @@
+<%#= @service_item.inspect %>
+<% if cookies[:language] == "eng" %>
+  <div class="container news-item-pad">
+    <div class="row">
+      <div class="span4 news-item-make-full">
+        <%= image_tag(@service_item.icon_main.url(:main), :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name_eng}") %>
+      </div>
+      <div class="span8 news-item-make-full">
+        <h1 class="news-item-h1"><%= @service_item.name_eng %></h1>
+        <p class="news-descr-small"><%= @service_item.intro_eng.html_safe %></p>
+        <div class="service-item-descr-full"><%= @service_item.descr_eng.html_safe %></div>
+        <% if @service_item.gallery? %>
+          <p><h3 style="color: #F27321;">Gallery</h3></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% elsif cookies[:language] == "rus"  %>
+
+  <div class="container news-item-pad">
+    <div class="row">
+      <div class="span4 news-item-make-full">
+        <%= image_tag(@service_item.icon_main.url, :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name_rus}") %>
+      </div>
+      <div class="span8 news-item-make-full">
+        <h1 class="news-item-h1"><%= @service_item.name_rus %></h1>
+        <p class="news-descr-small"><%= @service_item.intro_rus.html_safe %></p>
+        <div class="service-item-descr-full"><%= @service_item.descr_rus.html_safe %></div>
+        <% if @service_item.gallery? %>
+          <p><h3 style="color: #F27321;">Галерея</h3></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% elsif cookies[:language] == "ukr"  %>
+  <div class="container news-item-pad">
+    <div class="row">
+      <div class="span4 news-item-make-full">
+        <%= image_tag(@service_item.icon_main.url, :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name_ukr}") %>
+      </div>
+      <div class="span8 news-item-make-full">
+        <h1 class="news-item-h1"><%= @service_item.name_ukr %></h1>
+        <p class="news-descr-small"><%= @service_item.intro_ukr.html_safe %></p>
+        <div class="service-item-descr-full"><%= @service_item.descr_ukr.html_safe %></div>
+        <% if @service_item.gallery? %>
+          <p><h3 style="color: #F27321;">Галерея</h3></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% elsif cookies[:language] == "de"  %>
+  <div class="container news-item-pad">
+    <div class="row">
+      <div class="span4 news-item-make-full">
+        <%= image_tag(@service_item.icon_main.url, :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name_de}") %>
+      </div>
+      <div class="span8 news-item-make-full">
+        <h1 class="news-item-h1"><%= @service_item.name_de %></h1>
+        <p class="news-descr-small"><%= @service_item.intro_de.html_safe %></p>
+        <div class="service-item-descr-full"><%= @service_item.descr_de.html_safe %></div>
+        <% if @service_item.gallery? %>
+          <p><h3 style="color: #F27321;">Galerie</h3></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="container news-item-pad">
+    <div class="row">
+      <div class="span4 news-item-make-full">
+        <%= image_tag(@service_item.icon_main.url, :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name}") %>
+      </div>
+      <div class="span8 news-item-make-full">
+        <h1 class="news-item-h1"><%= @service_item.name %></h1>
+        <p class="news-descr-small"><%= @service_item.intro.html_safe %></p>
+        <div class="service-item-descr-full"><%= @service_item.descr.html_safe %></div>
+        <% if @service_item.gallery? %>
+          <p><h3 style="color: #F27321;">Галерея</h3></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+<% if @service_item.gallery? %>
+  <div class="container news-gallerys">
+    <div class="row">
+      <div class="span4">&nbsp;</div>
+      <% @service_item.gallery.each do |image| %>
+        <div class="span2 <%= cycle("first_news_child", "", "", "last_news_child") %>">
+          <%= link_to image_tag(image.url(:big), :class => "news-item-img"), image.url(:fancy), :class => "fancybox ", :rel => "gallery_news" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div id="push-service" class="container">
+  <div class="row">
+    <div class="span12">&nbsp;</div>
+  </div>
+</div>

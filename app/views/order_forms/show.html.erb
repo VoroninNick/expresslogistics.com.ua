@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @order_form.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @order_form.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @order_form.phone %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @order_form.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_form_path(@order_form) %> |
+<%= link_to 'Back', order_forms_path %>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="/assets/flex-controlls.css?body=1" media="screen" rel="stylesheet" type="text/css">
+  <link href="/assets/style.css?body=1" media="screen" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap-responsive.css?body=1" media="screen" rel="stylesheet" type="text/css">
+  <link href="/assets/bootstrap.css?body=1" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery-1.8.0.min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/woothemes/FlexSlider/master/jquery.flexslider.js"></script>
+</head>
+<body>
+  
+      <script type="text/javascript">
+        $(window).load(function() {
+          $('.flexslider').flexslider({
+            animation: "fade",
+            controlNav: false,
+            directionNav: true,
+            keyboard: false,
+            // before: function(){
+            //   $('.flex-info-block').fadeIn('slow');
+            // },
+            // start: function(){
+            //   $('.flex-info-block').fadeIn('slow');
+            // }
+          });
+        });
+      </script>
+      <div id="" class="flexslider">
+  <ul class="slides">
+    <li>
+      <img src="<%= asset_path('ban.jpg') %>" alt=""/>
+      <!-- <div class="flex-info-block">
+        <div class="flex-info-block-p">
+          <p>Груз любой формы и размера</p>
+          <p>перевезем по суши автотранспортом </p>
+          <p>в любую точку!</p>
+        </div>
+      </div> -->
+    </li>
+    <li>
+      <img src="<%= asset_path('ban2.jpg') %>" alt=""/>
+      <!-- <div class="flex-info-block">
+        <div class="flex-info-block-p">
+          <p>Груз любой формы и </p>
+          <p>перевезем по суши  </p>
+          <p>в любую точку!</p>
+        </div>
+      </div> -->
+    </li>
+  </ul>
+</div>
+</body>
+</html>
+

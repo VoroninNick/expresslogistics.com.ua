@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  intro_text: MyString
+  first_paragraph: MyText
+  proverb: MyText
+  second_paragraph: MyText
+  third_paragraph: MyText
+  last_paragraph: MyText
+  avatar: 
+  photo: 
+
+two:
+  name: MyString
+  intro_text: MyString
+  first_paragraph: MyText
+  proverb: MyText
+  second_paragraph: MyText
+  third_paragraph: MyText
+  last_paragraph: MyText
+  avatar: 
+  photo: 

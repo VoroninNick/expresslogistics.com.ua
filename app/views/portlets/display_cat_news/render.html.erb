@@ -1,0 +1,12 @@
+<div class="container news-item-pad">
+  <div class="row">
+      <% @news.each do |item| %>
+      <div class="span12 service-listing-full-width <%= cycle('left-service', 'right-service') %>">
+        <div class="service-img news-item-img"><%= image_tag(item.avatar.url(:cat), :class => "", :style => "width: 100%;", :alt => "#{item.name}", :title => "#{item.name}") %></div>
+        <div class="service-descr"><h3><%= link_to(truncate(item.name, :length => 60, :omission => '...'), "/news/#{item.id}", :class => "service-links", :title => "#{item.name}") %></h3>
+        <p><%= truncate(item.intro_text, :length => 320, :omission => '...') %></p>
+        <p class="news-home-link"><a href="/news/<%= item.id %>" title="<%= item.name %>"></a></p></div>
+      </div> <!-- service -->
+      <% end %>
+  </div>
+</div>

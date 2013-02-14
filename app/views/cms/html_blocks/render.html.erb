@@ -1,0 +1,11 @@
+<% if cookies[:language] == "ukr" %>
+  <%= @content_block.content_ukr.html_safe %>
+<% elsif cookies[:language] == "rus" %>
+  <%= @content_block.content_rus.html_safe %>
+<% elsif cookies[:language] == "eng" %>
+  <%= @content_block.content_eng.html_safe %>
+<% elsif cookies[:language] == "de" %>
+  <%= @content_block.content_de.html_safe %>
+<% else %>
+  <%= @content_block.content.html_safe %>
+<% end %>

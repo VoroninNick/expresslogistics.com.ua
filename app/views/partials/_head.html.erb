@@ -1,0 +1,429 @@
+<!DOCTYPE>
+<html lang="uk">
+  <head>
+    <!--[if lte IE 8]><script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script><![endif]-->
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title><%= page_title %></title>
+    <meta name="keywords" content="<%=current_page.keywords%>" />
+    <meta name="description" content="<%=current_page.description%>" />
+    <meta name="studio" content="Дизайн студія Миколи Вороніна" />
+    <meta name="art-director" content="Микола Воронін" />
+    <meta name="web-developer" content="Калантаєвській Віктор" />
+    <meta name="studio-url" content="http://voroninstudio.eu" />
+    <meta name="envirment" content="<%= Rails.env %>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <% if cookies[:language] == "eng" %>
+    <meta name="language" content="english">
+    <% elsif cookies[:language] == "rus" %>
+    <meta name="language" content="russian">
+    <% elsif cookies[:language] == "ukr" %>
+    <meta name="language" content="ukraine">
+    <% elsif cookies[:language] == "de" %>
+    <meta name="language" content="de">
+    <% end %>
+    <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+    <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
+    <%= csrf_meta_tags %>
+    <%= yield :html_head %>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+
+    <!--
+      #Content for helper templates :head
+    -->
+    <%#= yield :heading_cutoms %>
+    <!-- script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+          <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+    <![endif]-->
+    <% if current_page.path == '/contact-us' %>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="https://raw.github.com/padolsey/prettyPrint.js/14f6cf1a3c90da79b0e6bab34627e996404910d7/prettyprint.js"></script>
+    <script type="text/javascript" src="https://raw.github.com/HPNeo/gmaps/master/gmaps.js"></script>
+    <% end %>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        <% if current_page.path != '/about' %>
+        $("ul.head-menu li.li-about-us").hover(function() {
+          $(".hover-eff-about-us").show();
+          $(".hover-eff-about-us img").effect("bounce", { direction:'up', times:2, distance:8 }, 450);
+        },function(){
+          $(".hover-eff-about-us").hide();
+        });
+
+        $("ul.head-menu li.li-about-us, .hover-eff-about-us").click(function() {
+          window.location.href = "/about";
+        });
+        <% end %>
+
+        <% if current_page.path != '/orders' %>
+        $("ul.head-menu li.li-our-park").hover(function() {
+          $(".hover-eff-our-park").show();
+          $(".hover-eff-our-park img").effect("bounce", { direction:'up', times:2, distance:8 }, 450);
+        },function(){
+          $(".hover-eff-our-park").hide();
+        });
+
+        $("ul.head-menu li.li-our-park, .hover-eff-our-park").click(function() {
+          window.location.href = "/orders";
+        });
+        <% end %>
+
+        <% if current_page.path != '/services' %>
+        $("ul.head-menu li.li-services").hover(function() {
+          $(".hover-eff-services").show();
+          $(".hover-eff-services img").effect("bounce", { direction:'up', times:2, distance:8 }, 450);
+        },function(){
+          $(".hover-eff-services").hide();
+        });
+
+        $("ul.head-menu li.li-services, .hover-eff-services").click(function() {
+          window.location.href = "/services";
+        });
+        <% end %>
+
+        <% if current_page.path != '/contact-us' %>
+        $("ul.head-menu li.li-contact").hover(function() {
+        $(".hover-eff-contact").show();
+        $(".hover-eff-contact img").effect("bounce", { direction:'up', times:4, distance:8 }, 450);
+        },function(){
+        $(".hover-eff-contact").hide();
+        });
+
+        $("ul.head-menu li.li-contact, .hover-eff-contact").click(function() {
+          window.location.href = "/contact-us";
+        });
+        <% end %>
+
+        $("#eng").click(function() {
+          $.cookie('language', 'eng', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $("#rus").click(function() {
+          $.cookie('language', 'rus', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $("#de").click(function() {
+          $.cookie('language', 'de', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $("#ua").click(function() {
+          $.cookie('language', 'ukr', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+
+        <% if current_page.path == '/contact-us' %>
+        //Map
+        map = new GMaps({
+            div: '#map',
+            lat: 49.81571,
+            lng: 23.919465,
+            zoomControl : true,
+            zoomControlOpt: {
+                style : 'SMALL',
+                position: 'TOP_LEFT'
+            },
+            panControl : false,
+            streetViewControl : false,
+            mapTypeControl: false,
+            overviewMapControl: false
+          });
+
+          map.addMarker({
+            lat: 49.81571,
+            lng: 23.919465,
+            content: '<div class="overlay">Lima</div>'
+          });
+          <% end %>
+
+
+      });
+    </script>
+    <% if current_page.path == '/' %>
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('#banner_j').mobilyslider({
+            content: '.sliderContent',
+            children: 'div',
+            transition: 'fade',
+            animationSpeed: 2400,
+            autoplay: true,
+            autoplaySpeed: 12000,
+            pauseOnHover: false,
+            bullets: false,
+            arrows: true,
+            arrowsHide: false,
+            prev: 'prev',
+            next: 'next',
+            animationStart: function(){  },
+            animationComplete: function(){ $('.flex-info-block').fadeIn('slow'); }
+          });
+          $('.flex-info-block').fadeIn('slow');
+        });
+      </script>
+    <% end %>
+    <script type="text/javascript">
+      function InitStSf(){
+        $('.copy-studio img').hover(function (){
+          console.warn('Hovered logo!');
+        });
+      }
+    </script>
+  </head>
+  <body data-envariment="<%= Rails.env %>" data-api="<%=SecureRandom.hex(5) %>" onload="InitStSf();ClrStr();">
+    <%= cms_toolbar %>
+    <%= container :bg_random_changer %>
+
+    <div id="wrap">
+    <div id="main" class="clearfix">
+      <div id="header" class="clearfix">
+        <div class="container">
+        <div class="row">
+        <div class="span4" id="logo">
+          <% if current_page.path != "/" %>
+          <a href="/" title="">
+            <img src="<%= asset_path('el-logo-big.png') %>" alt="" class="logo-940">
+          </a>
+          <% else %>
+            <img src="<%= asset_path('el-logo-big.png') %>" alt="" class="logo-940">
+          <% end %>
+        </div>
+        <div class="span4 logo-small">
+          <% if current_page.path != "/" %>
+              <a href="/" title="">
+                <img src="<%= asset_path('el-logo-big-small.png') %>" alt="" class="logo-940">
+              </a>
+          <% else %>
+              <img src="<%= asset_path('el-logo-big-small.png') %>" alt="" class="logo-940">
+          <% end %>
+        </div>
+        <!-- span4 -->
+        <div class="span8" id="nav">
+          <ul class="head-menu">
+            <!-- About page -->
+            <% if cookies[:language] == "eng" %>
+            <li class="li-about-us <% if current_page.path == '/about' %>active-list<% else %>fake<% end %>" id="eng-li-about-us">
+              <a href="<% if current_page.path == '/about' %>#<% else %>/about<% end %>" title="About">
+                <span class="hover-eff-about-us" id="eng-hover-eff-about-us">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="About">
+                </span>
+                About
+              </a>
+            </li>
+
+            <% elsif cookies[:language] == "rus"  %>
+            <li class="li-about-us <% if current_page.path == '/about' %>active-list<% else %>fake<% end %> rus-li-about-us">
+              <a href="<% if current_page.path == '/about' %>#<% else %>/about<% end %>" title="О компании">
+                <span class="hover-eff-about-us rus-hover-eff-about-us">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="О компании">
+                </span>
+                О КОМПАНИИ
+              </a>
+            </li>
+
+            <% elsif cookies[:language] == "ukr"  %>
+            <li class="li-about-us <% if current_page.path == '/about' %>active-list<% else %>fake<% end %>" id="ukr-li-about-us">
+              <a href="<% if current_page.path == '/about' %>#<% else %>/about<% end %>" title="Про компанію">
+                <span class="hover-eff-about-us" id="ukr-hover-eff-about-us">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="Про компанію">
+                </span>
+                про компанію
+              </a>
+            </li>
+
+            <% elsif cookies[:language] == "de"  %>
+            <li class="li-about-us <% if current_page.path == '/about' %>active-list<% else %>fake<% end %>" id="de-li-about-us">
+              <a href="<% if current_page.path == '/about' %>#<% else %>/about<% end %>" title="Firma">
+                <span class="hover-eff-about-us" id="de-hover-eff-about-us">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="Firma">
+                </span>
+                firma
+              </a>
+            </li>
+
+            <% else %>
+            <li class="li-about-us <% if current_page.path == '/about' %>active-list<% else %>fake<% end %>">
+              <a href="<% if current_page.path == '/about' %>#<% else %>/about<% end %>" title="О компании">
+                <span class="hover-eff-about-us">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="О компании">
+                </span>
+                О КОМПАНИИ
+              </a>
+            </li>
+            <% end %>
+            <!-- /About page -->
+
+
+            <!-- Parks page -->
+            
+            
+            <!-- /Parks page -->
+
+            <!-- Services page -->
+            <% if cookies[:language] == "eng" %>
+            <li class="li-services <% if current_page.path == '/services' %>active-list<% else %>fake<% end %>" id="eng-li-services">
+              <a href="<% if current_page.path == '/services' %>#<% else %>/services<% end %>" title="Services">
+                <span class="hover-eff-services" id="eng-hover-eff-services">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Services">
+                </span>
+                services
+              </a>
+            </li>
+            <% elsif cookies[:language] == "rus"  %>
+            <li class="li-services <% if current_page.path == '/services' %>active-list<% else %>fake<% end %> rus-li-services">
+              <a href="<% if current_page.path == '/services' %>#<% else %>/services<% end %>" title="Услуги">
+                <span class="hover-eff-services rus-hover-eff-services">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Услуги">
+                </span>
+                УСЛУГИ
+              </a>
+            </li>
+            <% elsif cookies[:language] == "ukr"  %>
+            <li class="li-services <% if current_page.path == '/services' %>active-list<% else %>fake<% end %>" id="ukr-li-services">
+              <a href="<% if current_page.path == '/services' %>#<% else %>/services<% end %>" title="Послуги">
+                <span class="hover-eff-services" id="ukr-hover-eff-services">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Послуги">
+                </span>
+                послуги
+              </a>
+            </li>
+            <% elsif cookies[:language] == "de"  %>
+            <li class="li-services <% if current_page.path == '/services' %>active-list<% else %>fake<% end %>" id="de-li-services">
+              <a href="<% if current_page.path == '/services' %>#<% else %>/services<% end %>" title="Dienstleistungen">
+                <span class="hover-eff-services" id="de-hover-eff-services">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Dienstleistungen">
+                </span>
+                dienstleistungen
+              </a>
+            </li>
+            <% else %>
+            <li class="li-services <% if current_page.path == '/services' %>active-list<% else %>fake<% end %> ">
+              <a href="<% if current_page.path == '/services' %>#<% else %>/services<% end %>" title="Услуги">
+                <span class="hover-eff-services">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Услуги">
+                </span>
+                УСЛУГИ
+              </a>
+            </li>
+            <% end %>
+            <!-- /Services page -->
+
+            <!-- About page -->
+            <% if cookies[:language] == "eng" %>
+            <li class="li-our-park <% if current_page.path == '/orders' %>active-list<% else %>fake<% end %>" id="eng-li-our-park">
+              <a href="<% if current_page.path == '/orders' %>#<% else %>/orders<% end %>" title="Orders">
+                <span class="hover-eff-our-park" id="eng-hover-eff-our-park">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="Orders">
+                </span>
+                Order
+              </a>
+            </li>
+
+            <% elsif cookies[:language] == "rus"  %>
+            <li class="li-our-park <% if current_page.path == '/orders' %>active-list<% else %>fake<% end %> rus-li-our-park">
+              <a href="<% if current_page.path == '/orders' %>#<% else %>/orders<% end %>" title="Форма онлайн заказа">
+                <span class="hover-eff-our-park rus-hover-eff-our-park">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="Форма онлайн заказа">
+                </span>
+                Заказать
+              </a>
+            </li>
+
+            <% elsif cookies[:language] == "ukr"  %>
+            <li class="li-our-park <% if current_page.path == '/orders' %>active-list<% else %>fake<% end %>" id="ukr-li-our-park">
+              <a href="<% if current_page.path == '/orders' %>#<% else %>/orders<% end %>" title="Форма онлайн замовленя">
+                <span class="hover-eff-our-park" id="ukr-hover-eff-our-park">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="Форма онлайн замовленя">
+                </span>
+                замовити
+              </a>
+            </li>
+
+            <% elsif cookies[:language] == "de"  %>
+            <li class="li-our-park <% if current_page.path == '/orders' %>active-list<% else %>fake<% end %>" id="de-li-our-park">
+              <a href="<% if current_page.path == '/orders' %>#<% else %>/orders<% end %>" title="">
+                <span class="hover-eff-our-park" id="de-hover-eff-our-park">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="">
+                </span>
+                Bestellen
+              </a>
+            </li>
+
+            <% else %>
+            <li class="li-our-park <% if current_page.path == '/orders' %>active-list<% else %>fake<% end %>">
+              <a href="<% if current_page.path == '/orders' %>#<% else %>/orders<% end %>" title="Форма онлайн заказа">
+                <span class="hover-eff-our-park">
+                  <img src=" <%= asset_path('hover-head-menu.png') %>" alt="Форма онлайн заказа">
+                </span>
+                Заказать
+              </a>
+            </li>
+            <% end %>
+            <!-- /About page -->
+
+            <!-- Contact page -->
+            <% if cookies[:language] == "eng" %>
+            <li class="li-contact <% if current_page.path == '/contact-us' %>active-list<% else %>fake<% end %> eng-li-contact">
+              <a href="<% if current_page.path == '/contact-us' %>#<% else %>/contact-us<% end %>" title="Contacts">
+                <span class="hover-eff-contact eng-hover-eff-contact">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Contacts">
+                </span>
+                CONTACTS
+              </a>
+            </li>
+            <% elsif cookies[:language] == "rus"  %>
+            <li class="li-contact <% if current_page.path == '/contact-us' %>active-list<% else %>fake<% end %> rus-li-contact">
+              <a href="<% if current_page.path == '/contact-us' %>#<% else %>/contact-us<% end %>" title="Контакты">
+                <span class="hover-eff-contact rus-hover-eff-contact">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Контакты">
+                </span>
+                КОНТАКТЫ
+              </a>
+            </li>
+            <% elsif cookies[:language] == "ukr"  %>
+            <li class="li-contact <% if current_page.path == '/contact-us' %>active-list<% else %>fake<% end %> ukr-li-contact">
+              <a href="<% if current_page.path == '/contact-us' %>#<% else %>/contact-us<% end %>" title="Контакти">
+                <span class="hover-eff-contact ukr-hover-eff-contact">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Контакти">
+                </span>
+                КОНТАКТИ
+              </a>
+            </li>
+            <% elsif cookies[:language] == "de"  %>
+            <li class="li-contact <% if current_page.path == '/contact-us' %>active-list<% else %>fake<% end %>" id="de-li-contact">
+              <a href="<% if current_page.path == '/contact-us' %>#<% else %>/contact-us<% end %>" title="Kontakte">
+                <span class="hover-eff-contact" id="de-hover-eff-contact">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Kontakte">
+                </span>
+                KONTAKTE
+              </a>
+            </li>
+            <% else %>
+            <li class="li-contact <% if current_page.path == '/contact-us' %>active-list<% else %>fake<% end %> ">
+              <a href="<% if current_page.path == '/contact-us' %>#<% else %>/contact-us<% end %>" title="Контакты">
+                <span class="hover-eff-contact">
+                  <img src="<%= asset_path('hover-head-menu.png') %>" alt="Контакты">
+                </span>
+                КОНТАКТЫ
+              </a>
+            </li>
+            <% end %>
+            <!-- /Contact page -->
+          </ul>
+        </div>
+        </div>
+        </div>
+      </div><!-- header -->

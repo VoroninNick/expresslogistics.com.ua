@@ -1,0 +1,100 @@
+<div class="container info-bar">
+  <div class="row">
+    <%#= current_page.inspect %>
+    <% if cookies[:language] == "eng" %>
+      <div class="span6 breadcrumbs" id="about-breadcrumbs">
+      //&nbsp;<span class="proper-info-links info-link-orange"><a href="/" class="bread-link">Home</a></span>
+      <% if current_page.path == '/news/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/news"class="bread-link">News</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% elsif current_page.path == '/services/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/services"class="bread-link">Services</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% else %>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= current_page.eng_name %></a></span>
+      <% end %>
+    </div>
+    <% elsif cookies[:language] == "rus"  %>
+      <div class="span6 breadcrumbs">
+      //&nbsp;<span class="proper-info-links info-link-orange"><a href="/" class="bread-link">Главная</a></span>
+      <% if current_page.path == '/news/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/news"class="bread-link">Анонсы</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% elsif current_page.path == '/services/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/services"class="bread-link">Услуги</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% else %>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= current_page.rus_name %></a></span>
+      <% end %>
+    </div>
+    <% elsif cookies[:language] == "ukr"  %>
+      <div class="span6 breadcrumbs">
+      //&nbsp;<span class="proper-info-links info-link-orange"><a href="/" class="bread-link">Головна</a></span>
+      <% if current_page.path == '/news/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/news"class="bread-link">Анонси</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+        <% elsif current_page.path == '/services/item' %>
+          &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/services"class="bread-link">Послуги</a></span>
+          &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% else %>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= current_page.ua_name %></a></span>
+      <% end %>
+    </div>
+    <% elsif cookies[:language] == "de"  %>
+      <div class="span6 breadcrumbs">
+      //&nbsp;<span class="proper-info-links info-link-orange"><a href="/" class="bread-link">Zuhause</a></span>
+      <% if current_page.path == '/news/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/news"class="bread-link">Ankündigungen</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+        <% elsif current_page.path == '/services/item' %>
+          &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/services"class="bread-link">Dienstleistungen</a></span>
+          &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% else %>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= current_page.de_name %></a></span>
+      <% end %>
+    </div>
+    <% else %>
+      <div class="span6 breadcrumbs">
+      //&nbsp;<span class="proper-info-links info-link-orange"><a href="/" class="bread-link">Главная</a></span>
+      <% if current_page.path == '/news/item' %>
+      &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/news"class="bread-link">Анонсы</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+        <% elsif current_page.path == '/services/item' %>
+          &nbsp;/&nbsp;<span class="proper-info-links info-link-orange"><a href="/services"class="bread-link">Услуги</a></span>
+          &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= page_title %></a></span>
+      <% else %>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link"><%= current_page.name %></a></span>
+      <% end %>
+    </div>
+    <% end %>
+    <div class="span6 lang">
+
+      <% if cookies[:language] == "eng" %>
+      <span  id="eng_" class="lang-bars lang-act" title="English language">ENG</span>
+      <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+      <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+      <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+      <% elsif cookies[:language] == "rus"  %>
+      <span  id="eng" class="lang-bars" title="English language">ENG</span>
+      <span  id="rus_" class="lang-bars lang-act" title="Русский язык">RUS</span>
+      <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+      <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+      <% elsif cookies[:language] == "ukr"  %>
+      <span  id="eng" class="lang-bars" title="English language">ENG</span>
+      <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+      <span  id="ua_" class="lang-bars lang-act" title="Україньска мова">UA</span>
+      <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+      <% elsif cookies[:language] == "de"  %>
+      <span  id="eng" class="lang-bars" title="English language">ENG</span>
+      <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+      <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+      <span  id="de_" class="lang-bars lang-act" title="Deutsch language">DE</span>
+      <% else %>
+      <span  id="eng" class="lang-bars" title="English language">ENG</span>
+      <span  id="rus_" class="lang-bars lang-act" title="Русский язык">RUS</span>
+      <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+      <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+      <% end %>
+    </div>
+  </div>
+</div><!-- info bar -->

@@ -1,0 +1,17 @@
+<%= render :partial => 'partials/head' %>
+<div id="services" class="background-randoms">
+  <%= render :partial => 'partials/infobar' %>
+  <div class="container service-proverb">
+    <div class="row">
+      <div class="span8">
+        <h2 class="services-h2"><%= container :news_h2 %></h2>
+        <p class="services-p"><%= container :news_p %></p>
+      </div>
+    </div>
+  </div> <!-- container service-proverb -->
+  <div class="container service-listing">
+    <%= container :news_show %>
+  </div> <!-- container service-listing -->
+</div>
+<%= render :partial => 'partials/sponsor' %>
+<%= render :partial => 'partials/foot' %>

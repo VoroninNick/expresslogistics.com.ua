@@ -1,0 +1,29 @@
+<h1>Listing order_forms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Body</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @order_forms.each do |order_form| %>
+  <tr>
+    <td><%= order_form.name %></td>
+    <td><%= order_form.email %></td>
+    <td><%= order_form.phone %></td>
+    <td><%= order_form.body %></td>
+    <td><%= link_to 'Show', order_form %></td>
+    <td><%= link_to 'Edit', edit_order_form_path(order_form) %></td>
+    <td><%= link_to 'Destroy', order_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order form', new_order_form_path %>

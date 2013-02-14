@@ -1,0 +1,870 @@
+<%= render :partial => 'partials/head' %>
+<div id="contact-page" class="background-randoms">
+  <%= render :partial => 'partials/infobar' %>
+  <div class="container contact-proverb">
+    <div class="row">
+      <% if cookies[:language] == "eng" %>
+      <h2 class="span12 contact-h2">Contacts</h2>
+      <% elsif cookies[:language] == "rus"  %>
+      <h2 class="span12 contact-h2">Контакты</h2>
+      <% elsif cookies[:language] == "ukr"  %>
+      <h2 class="span12 contact-h2">Контакти</h2>
+      <% elsif cookies[:language] == "de"  %>
+      <h2 class="span12 contact-h2">Kontakte</h2>
+      <% else %>
+      <h2 class="span12 contact-h2">Контакты</h2>
+      <% end %>
+      <div class="span3 contact-make-full">
+        <p class="orange">
+          <% if cookies[:language] == "eng" %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Adress:</i>
+          <% elsif cookies[:language] == "rus"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Адрес:</i>
+          <% elsif cookies[:language] == "ukr"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Адреса:</i>
+          <% elsif cookies[:language] == "de"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Adresse:</i>
+          <% else %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Адрес:</i>
+          <% end %>
+        </p>
+        <p class="contact-page-p">
+          Україна, м. Львів<br> Кільцева дорога<br> с. Скнилів
+        </p>
+      </div>
+
+      <div class="span3 contact-make-full contact-gps-smaller" style="display: block !important;">
+            <p class="orange">
+              <% if cookies[:language] == "eng" %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>GPS coordinates:</i>
+              <% elsif cookies[:language] == "rus"  %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Координаты GPS:</i>
+              <% elsif cookies[:language] == "ukr"  %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Координати GPS:</i>
+              <% elsif cookies[:language] == "de"  %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>GPS-Koordinaten:</i>
+              <% else %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Координаты GPS:</i>
+              <% end %>
+            </p>
+            <p class="contact-page-p">
+              <i>49<sup>°</sup> 48<sup>′</sup> 757<sup>″</sup>&nbsp;&nbsp;&nbsp;&nbsp;Пн.&nbsp;Ш.</i> <br>
+              <i>23<sup>°</sup> 58<sup>′</sup> 671<sup>″</sup>&nbsp;&nbsp;&nbsp;&nbsp;Сх.&nbsp;Д.</i>
+            </p>
+      </div>
+      <div class="span3 fx-m25 contact-make-full">
+        <p class="orange">
+          <% if cookies[:language] == "eng" %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Mailing:</i>
+          <% elsif cookies[:language] == "rus"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Для почты:</i>
+          <% elsif cookies[:language] == "ukr"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Для листів:</i>
+          <% elsif cookies[:language] == "de"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Postsendung:</i>
+          <% else %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Для почты:</i>
+          <% end %>
+        </p>
+        <p class="contact-page-p">
+          а/с 2789 <br> вул. Городоцька 155, <br> 79018 м. Львів
+        </p>
+      </div>
+      <div class="span3 fx-m115 contact-make-full">
+        <p class="orange">
+          <% if cookies[:language] == "eng" %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Telephones:</i>
+          <% elsif cookies[:language] == "rus"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Телефоны:</i>
+          <% elsif cookies[:language] == "ukr"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Телефони:</i>
+          <% elsif cookies[:language] == "de"  %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Phones:</i>
+          <% else %>
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Телефоны:</i>
+          <% end %>
+        </p>
+        <p class="contact-page-p" style="line-height: 30px !important;font-weight: bold;font-size: 20px !important;">
+          <span style="font-weight: normal;">+38 (0322)</span> 242-12-00 <br>
+          <span style="float: left;height: 1px;width: 10px;position: relative;display: block;margin-right: 88px;">&nbsp;</span> 242-12-00
+        </p>
+      </div>
+      
+    </div>
+  </div>
+      <div class="container contact-gps" style="display: none !important;">
+        <div class="row">
+          <div class="span4 contact-make-full">
+            <p class="orange">
+              <% if cookies[:language] == "eng" %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>GPS coordinates:</i>
+              <% elsif cookies[:language] == "rus"  %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Координаты GPS:</i>
+              <% elsif cookies[:language] == "ukr"  %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Координати GPS:</i>
+              <% elsif cookies[:language] == "de"  %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>GPS-Koordinaten:</i>
+              <% else %>
+              <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Координаты GPS:</i>
+              <% end %>
+            </p>
+            <p class="contact-page-p">
+              <i>49<sup>°</sup> 48<sup>′</sup> 757<sup>″</sup>&nbsp;&nbsp;&nbsp;&nbsp;Пн.&nbsp;Ш.</i> <br>
+              <i>23<sup>°</sup> 58<sup>′</sup> 671<sup>″</sup>&nbsp;&nbsp;&nbsp;&nbsp;Сх.&nbsp;Д.</i>
+            </p>
+          </div>
+        </div>
+      </div>
+
+  <div class="container contact-map"><!-- Map -->
+    <div class="row">
+      <div class="span12">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container managers">
+  <div class="row">
+  <% if cookies[:language] == "eng" %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Director to Express Logistics:</i>
+      </p>
+      <p class="contact-page-p">
+        Vasilyi Sanotskyi <br>
+        <span class="orange email-icon">@ </span><a href="mailto:sanotsky@expresslogistics.com.ua">sanotsky</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "rus"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Директор компании:</i>
+      </p>
+      <p class="contact-page-p">
+        Саноцкий Василий Васильевич <br>
+        <span class="orange email-icon">@ </span><a href="mailto:sanotsky@expresslogistics.com.ua">sanotsky</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "ukr"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Директор:</i>
+      </p>
+      <p class="contact-page-p">
+        Саноцкий Василий Васильевич <br>
+        <span class="orange email-icon">@ </span><a href="mailto:sanotsky@expresslogistics.com.ua">sanotsky</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "de"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Директор:</i>
+      </p>
+      <p class="contact-page-p">
+        Саноцкий Василий Васильевич <br>
+        <span class="orange email-icon">@ </span><a href="mailto:sanotsky@expresslogistics.com.ua">sanotsky</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% else %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Директор компании:</i>
+      </p>
+      <p class="contact-page-p">
+        Саноцкий Василий Васильевич <br>
+        <span class="orange email-icon">@ </span><a href="mailto:sanotsky@expresslogistics.com.ua">sanotsky</a> <br>
+      </p>
+    </div><!-- end span4 -->
+    <% end %><!-- director section -->
+
+ 
+
+  <% if cookies[:language] == "eng" %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Head of Commercial and Logistics Department:</i>
+      </p>
+      <p class="contact-page-p">
+        Soltys Pavlo <br>
+        +38 (067) 208-87-88 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:soltys_pavlo@expresslogistics.com.ua ">soltys_pavlo</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "rus"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Руководитель отдела:</i>
+      </p>
+      <p class="contact-page-p">
+        Солтыс Павел <br>
+        +38 (067) 208-87-88 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:soltys_pavlo@expresslogistics.com.ua ">soltys_pavlo</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "ukr"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Керівник Відділу:</i>
+      </p>
+      <p class="contact-page-p">
+        Солтис Павло <br>
+        +38 (067) 208-87-88 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:soltys_pavlo@expresslogistics.com.ua ">soltys_pavlo</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "de"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Керівник Відділу:</i>
+      </p>
+      <p class="contact-page-p">
+        Солтис Павло <br>
+        +38 (067) 208-87-88 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:soltys_pavlo@expresslogistics.com.ua ">soltys_pavlo</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% else %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Руководитель отдела:</i>
+      </p>
+      <p class="contact-page-p">
+        Солтыс Павел <br>
+        +38 (067) 208-87-88 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:soltys_pavlo@expresslogistics.com.ua ">soltys_pavlo</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% end %> <!-- office2 section -->
+   <% if cookies[:language] == "eng" %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Office manager:</i>
+      </p>
+      <p class="contact-page-p">
+        Zalizna Julija <br>
+        +38 (067) 675-79-02 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:zalizna_julija@expresslogistics.com.ua">zalizna_julija</a> <br>
+      </p>
+
+
+
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "rus"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Офис  менеджер:</i>
+      </p>
+      <p class="contact-page-p">
+        Зализна Юлия <br>
+        +38 (067) 675-79-02 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:zalizna_julija@expresslogistics.com.ua">zalizna_julija</a> <br>
+      </p>
+
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "ukr"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Офіс менеджер:</i>
+      </p>
+      <p class="contact-page-p">
+        Залізна Юлія <br>
+        +38 (067) 675-79-02 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:zalizna_julija@expresslogistics.com.ua">zalizna_julija</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% elsif cookies[:language] == "de"  %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Офіс менеджер:</i>
+      </p>
+      <p class="contact-page-p">
+        Залізна Юлія <br>
+        +38 (067) 675-79-02 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:zalizna_julija@expresslogistics.com.ua">zalizna_julija</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% else %>
+    <div class="span4 contact-make-full ">
+      <p class="orange">
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Офис  менеджер:</i>
+      </p>
+      <p class="contact-page-p">
+        Зализна Юлия <br>
+        +38 (067) 675-79-02 <br>
+        <span class="orange email-icon">@ </span><a href="mailto:zalizna_julija@expresslogistics.com.ua">zalizna_julija</a> <br>
+      </p>
+    </div><!-- end span4 -->
+  <% end %> <!-- office section -->
+
+
+
+  </div>
+  </div>
+  
+
+  <div class="container sub-managers">
+    <div class="row">
+    <% if cookies[:language] == "eng" %>
+      <div class="span3 contact-make-full " id="managers-zone">
+        <p class="orange" style="margin-top: 40px;margin-left: 30px;">
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Manager of Commercial and Logistics Department:</i>
+        </p>
+        <p class="contact-page-p">
+          Lemchak Volodymyr
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-62-81
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Rokicka Solomija
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-57
+        </p>
+        <p class="contact-page-p">
+          <a href="mailto:rokicka_solomija@expresslogistics.com.ua ">@rokicka_solomija</a>
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Velychko Tanja
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-76-70
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Ilchishin Taras
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-84
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Vuyek Bogdan
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-96
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Bunda Marjan
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-63-01
+        </p>
+        <p class="contact-page-p">
+          <a href="mailto:bunda_marjan@expresslogistics.com.ua ">@bunda_marjan </a>
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Temeh Taras
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-55
+        </p>
+        <p class="contact-page-p">
+          <a href="mailto:temeh_taras@expresslogistics.com.ua ">@temeh_taras </a>
+        </p>
+      </div><!-- end span4 -->
+    <% elsif cookies[:language] == "rus"  %>
+      <div class=" contact-make-full " id="managers-zone">
+        <p class="orange" style="margin-top: 40px;margin-left: 30px;">
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Менеджер:</i>
+        </p>
+        <div class="span4">
+        <p class="contact-page-p">
+          Рокицка Соломия
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-57
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:rokicka_solomija@expresslogistics.com.ua ">rokicka_solomija</a>
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Бунда Марьян
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-63-01
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:bunda_marjan@expresslogistics.com.ua ">bunda_marjan </a>
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Темех Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-55
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:temeh_taras@expresslogistics.com.ua ">temeh_taras</a>
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Лемчак Владимир
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-62-81
+        </p>
+        </div>
+
+        <div class="span4">
+        <p class="contact-page-p">
+          Величко Татьяна
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-76-70
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Ильчишин Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-84
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Вуек Богдан
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-96
+        </p>
+        </div>
+
+      </div><!-- end span4 -->
+    <% elsif cookies[:language] == "ukr"  %>
+      <div class="span3 contact-make-full " id="managers-zone">
+        <p class="orange" style="margin-top: 40px;margin-left: 30px;">
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Менеджери:</i>
+        </p>
+        <p class="contact-page-p">
+          Лемчак Володимир
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-62-81
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Рокицька Соломія
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-57
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:rokicka_solomija@expresslogistics.com.ua ">rokicka_solomija</a>
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Величко Тетяна
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-76-70
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Ільчишин Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-84
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Вуєк Богдан
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-96
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Бунда Мар’ян
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-63-01
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:bunda_marjan@expresslogistics.com.ua ">bunda_marjan </a>
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Темех Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-55
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:temeh_taras@expresslogistics.com.ua ">temeh_taras </a>
+        </p>
+      </div><!-- end span4 -->
+    <% elsif cookies[:language] == "de"  %>
+      <div class="span3 contact-make-full " id="managers-zone">
+        <p class="orange" style="margin-top: 40px;margin-left: 30px;">
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Менеджери:</i>
+        </p>
+        <p class="contact-page-p">
+          Лемчак Володимир
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-62-81
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Рокицька Соломія
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-57
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:rokicka_solomija@expresslogistics.com.ua ">rokicka_solomija </a>
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Величко Тетяна
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-76-70
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Ільчишин Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-84
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Вуєк Богдан
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-96
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Бунда Мар’ян
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-63-01
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:bunda_marjan@expresslogistics.com.ua ">bunda_marjan </a>
+        </p>
+        <br>
+        <p class="contact-page-p">
+          Темех Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-55
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:temeh_taras@expresslogistics.com.ua ">temeh_taras </a>
+        </p>
+      </div><!-- end span4 -->
+    <% else %>
+      <div class=" contact-make-full " id="managers-zone">
+        <p class="orange" style="margin-top: 40px;margin-left: 30px;">
+          <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Менеджер:</i>
+        </p>
+        <div class="span4">
+        <p class="contact-page-p">
+          Рокицка Соломия
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-57
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:rokicka_solomija@expresslogistics.com.ua ">rokicka_solomija </a>
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Бунда Марьян
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-63-01
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:bunda_marjan@expresslogistics.com.ua ">bunda_marjan </a>
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Темех Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-86-55
+        </p>
+        <p class="contact-page-p">
+          <span class="orange email-icon">@ </span><a href="mailto:temeh_taras@expresslogistics.com.ua ">temeh_taras </a>
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Лемчак Владимир
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-62-81
+        </p>
+        </div>
+
+        <div class="span4">
+        <p class="contact-page-p">
+          Величко Татьяна
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 675-76-70
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Ильчишин Тарас
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-84
+        </p>
+        </div>
+        <div class="span4">
+        <p class="contact-page-p">
+          Вуек Богдан
+        </p>
+        <p class="contact-page-p">
+          +38 (067) 676-38-96
+        </p>
+        </div>
+
+      </div><!-- end span4 -->
+    <% end %> <!-- office3 section -->
+    </div>
+  </div>
+
+  <div class="container contact-forms"><!-- Form -->
+    <div class="row">
+      <div class="span12"><p class="orange">
+        <% if cookies[:language] == "eng" %>
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Feedback form:</i>
+        <% elsif cookies[:language] == "rus"  %>
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Форма обратной связи:</i>
+        <% elsif cookies[:language] == "ukr"  %>
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Форма зворотнього зв'язку:</i>
+        <% elsif cookies[:language] == "de"  %>
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Feedback form:</i>
+        <% else %>
+        <img src="<%= asset_path('about-head.png') %>" alt="" class="about-img"><i>Форма обратной связи:</i>
+        <% end %>
+      </p>
+      </div>
+      <% if cookies[:language] == "eng" %>
+      <div class="span4 contact-make-full-form">
+        <p>
+          <input type="text" placeholder="Voronin Nick " class="" id="f_name">
+          <script type="text/javascript">
+            var f_name = new LiveValidation('f_name');
+            f_name.add( Validate.Presence );
+            f_name.add( Validate.Length, { minimum: 3 } );
+          </script>
+          <label for="">name</label>
+        </p>
+        <p>
+          <input type="text" placeholder="voronin.nick@gmail.com " id="f_mail">
+          <script type="text/javascript">
+            var f_mail = new LiveValidation('f_mail');
+            f_mail.add( Validate.Presence );
+            f_mail.add( Validate.Email );
+          </script>
+          <label for="">@ email</label>
+        </p>
+        <p>
+          <input type="text" placeholder="(050) 417 07 28 " id="f_phone">
+          <script type="text/javascript">
+            var f_phone = new LiveValidation('f_phone');
+            f_phone.add( Validate.Presence );
+            f_phone.add( Validate.Length, { minimum: 3, maximum: 13 } );
+          </script>
+          <label for="">phone</label>
+        </p>
+      </div>
+      <% elsif cookies[:language] == "rus"  %>
+      <div class="span4 contact-make-full-form">
+        <p>
+          <input type="text" placeholder="Николай Валериевич " class="" id="f_name">
+          <script type="text/javascript">
+            var f_name = new LiveValidation('f_name');
+            f_name.add( Validate.Presence );
+            f_name.add( Validate.Length, { minimum: 3 } );
+          </script>
+          <label for="">имя</label>
+        </p>
+        <p>
+          <input type="text" placeholder="voronin.nick@gmail.com " id="f_mail">
+          <script type="text/javascript">
+            var f_mail = new LiveValidation('f_mail');
+            f_mail.add( Validate.Presence );
+            f_mail.add( Validate.Email );
+          </script>
+          <label for="">eл. почта</label>
+        </p>
+        <p>
+          <input type="text" placeholder="(050) 417 07 28 " id="f_phone">
+          <script type="text/javascript">
+            var f_phone = new LiveValidation('f_phone');
+            f_phone.add( Validate.Presence );
+            f_phone.add( Validate.Length, { minimum: 3, maximum: 13 } );
+          </script>
+          <label for="">телефон</label>
+        </p>
+      </div>
+      <% elsif cookies[:language] == "ukr"  %>
+      <div class="span4 contact-make-full-form">
+        <p>
+          <input type="text" placeholder="Николай Валериевич " class="" id="f_name">
+          <script type="text/javascript">
+            var f_name = new LiveValidation('f_name');
+            f_name.add( Validate.Presence );
+            f_name.add( Validate.Length, { minimum: 3 } );
+          </script>
+          <label for="">імя</label>
+        </p>
+        <p>
+          <input type="text" placeholder="voronin.nick@gmail.com " id="f_mail">
+          <script type="text/javascript">
+            var f_mail = new LiveValidation('f_mail');
+            f_mail.add( Validate.Presence );
+            f_mail.add( Validate.Email );
+          </script>
+          <label for="">пошта</label>
+        </p>
+        <p>
+          <input type="text" placeholder="(050) 417 07 28 " id="f_phone">
+          <script type="text/javascript">
+            var f_phone = new LiveValidation('f_phone');
+            f_phone.add( Validate.Presence );
+            f_phone.add( Validate.Length, { minimum: 3, maximum: 13 } );
+          </script>
+          <label for="">телефон</label>
+        </p>
+      </div>
+      <% elsif cookies[:language] == "de"  %>
+      <div class="span4 contact-make-full-form">
+        <p>
+          <input type="text" placeholder="Voronin Nick " class="" id="f_name">
+          <script type="text/javascript">
+            var f_name = new LiveValidation('f_name');
+            f_name.add( Validate.Presence );
+            f_name.add( Validate.Length, { minimum: 3 } );
+          </script>
+          <label for="">name</label>
+        </p>
+        <p>
+          <input type="text" placeholder="voronin.nick@gmail.com " id="f_mail">
+          <script type="text/javascript">
+            var f_mail = new LiveValidation('f_mail');
+            f_mail.add( Validate.Presence );
+            f_mail.add( Validate.Email );
+          </script>
+          <label for="">@ email</label>
+        </p>
+        <p>
+          <input type="text" placeholder="(050) 417 07 28 " id="f_phone">
+          <script type="text/javascript">
+            var f_phone = new LiveValidation('f_phone');
+            f_phone.add( Validate.Presence );
+            f_phone.add( Validate.Length, { minimum: 3, maximum: 13 } );
+          </script>
+          <label for="">phone</label>
+        </p>
+      </div>
+      <% else %>
+      <div class="span4 contact-make-full-form">
+        <p>
+          <input type="text" placeholder="Николай Валериевич " class="" id="f_name">
+          <script type="text/javascript">
+            var f_name = new LiveValidation('f_name');
+            f_name.add( Validate.Presence );
+            f_name.add( Validate.Length, { minimum: 3 } );
+          </script>
+          <label for="">имя</label>
+        </p>
+        <p>
+          <input type="text" placeholder="voronin.nick@gmail.com " id="f_mail">
+          <script type="text/javascript">
+            var f_mail = new LiveValidation('f_mail');
+            f_mail.add( Validate.Presence );
+            f_mail.add( Validate.Email );
+          </script>
+          <label for="">eл. почта</label>
+        </p>
+        <p>
+          <input type="text" placeholder="(050) 417 07 28 " id="f_phone">
+          <script type="text/javascript">
+            var f_phone = new LiveValidation('f_phone');
+            f_phone.add( Validate.Presence );
+            f_phone.add( Validate.Length, { minimum: 3, maximum: 13 } );
+          </script>
+          <label for="">телефон</label>
+        </p>
+      </div>
+      <% end %>
+
+      <% if cookies[:language] == "eng" %>
+      <div class="span8 contact-make-full-form">
+        <textarea placeholder="Your message." id="text_area"></textarea>
+        <script type="text/javascript">
+          var text_area = new LiveValidation('text_area');
+          text_area.add( Validate.Presence );
+          text_area.add( Validate.Length, { minimum: 3 } );
+        </script>
+      </div>
+      <% elsif cookies[:language] == "rus"  %>
+      <div class="span8 contact-make-full-form">
+        <textarea placeholder="Новостворена логістична компанія, яка спеціалізується на мультимодальних перевезеннях. Компанія здійснюватиме доставку вантажів по території України, країн Європи та пост радянського простору, а також близького сходу." id="text_area"></textarea>
+        <script type="text/javascript">
+          var text_area = new LiveValidation('text_area');
+          text_area.add( Validate.Presence );
+          text_area.add( Validate.Length, { minimum: 3 } );
+        </script>
+      </div>
+      <% elsif cookies[:language] == "ukr"  %>
+      <div class="span8 contact-make-full-form">
+        <textarea placeholder="Новостворена логістична компанія, яка спеціалізується на мультимодальних перевезеннях. Компанія здійснюватиме доставку вантажів по території України, країн Європи та пост радянського простору, а також близького сходу." id="text_area"></textarea>
+        <script type="text/javascript">
+          var text_area = new LiveValidation('text_area');
+          text_area.add( Validate.Presence );
+          text_area.add( Validate.Length, { minimum: 3 } );
+        </script>
+      </div>
+      <% elsif cookies[:language] == "de"  %>
+      <div class="span8 contact-make-full-form">
+        <textarea placeholder="Ihre Nachricht." id="text_area"></textarea>
+        <script type="text/javascript">
+          var text_area = new LiveValidation('text_area');
+          text_area.add( Validate.Presence );
+          text_area.add( Validate.Length, { minimum: 3 } );
+        </script>
+      </div>
+      <% else %>
+      <div class="span8 contact-make-full-form">
+        <textarea placeholder="Новостворена логістична компанія, яка спеціалізується на мультимодальних перевезеннях. Компанія здійснюватиме доставку вантажів по території України, країн Європи та пост радянського простору, а також близького сходу." id="text_area"></textarea>
+        <script type="text/javascript">
+          var text_area = new LiveValidation('text_area');
+          text_area.add( Validate.Presence );
+          text_area.add( Validate.Length, { minimum: 3 } );
+        </script>
+      </div>
+      <% end %>
+      <div class="span12">
+        <div style="text-align: right;"><a href="#"><img src="assets/send.png" alt=""></a></div>
+
+      </div>
+    </div>
+  </div><!-- contact-forms -->
+
+</div>
+
+<%= render :partial => 'partials/sponsor' %>
+<%= render :partial => 'partials/foot' %>

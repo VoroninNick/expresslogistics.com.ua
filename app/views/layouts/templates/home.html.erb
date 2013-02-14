@@ -1,0 +1,66 @@
+<%= render :partial => 'partials/head' %>
+<%= render :partial => 'partials/banners' %>
+
+      <div id="service-list">
+        <%= container :services_home %>
+      </div><!-- service-list -->
+      <div id="lang-panel-home">
+        <div class="container">
+          <div class="row">
+            <div class="span12 lang">
+              <% if cookies[:language] == "eng" %>
+                <span  id="eng_" class="lang-bars lang-act" title="English language">ENG</span>
+                <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+                <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+                <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+              <% elsif cookies[:language] == "rus"  %>
+                <span  id="eng" class="lang-bars" title="English language">ENG</span>
+                <span  id="rus_" class="lang-bars lang-act" title="Русский язык">RUS</span>
+                <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+                <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+              <% elsif cookies[:language] == "ukr"  %>
+                <span  id="eng" class="lang-bars" title="English language">ENG</span>
+                <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+                <span  id="ua_" class="lang-bars lang-act" title="Україньска мова">UA</span>
+                <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+              <% elsif cookies[:language] == "de"  %>
+                <span  id="eng" class="lang-bars" title="English language">ENG</span>
+                <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+                <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+                <span  id="de_" class="lang-bars lang-act" title="Deutsch language">DE</span>
+              <% else %>
+                <span  id="eng" class="lang-bars" title="English language">ENG</span>
+                <span  id="rus_" class="lang-bars lang-act" title="Русский язык">RUS</span>
+                <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+                <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="welcome-msg">
+        <div class="container">
+          <div class="row">
+            <div class="span4" id="hide-sec-logo"><img src="<%= asset_path('logo-symbol-only.png') %>" alt=""></div>
+            <div class="span8" id="info-text-full">
+              <h1 class="welcome-msg-h"><%= container :welcome_h2 %></h1>
+              <p class="welcome-msg-p"><%= container :welcome_p1 %></p>
+              <p class="welcome-msg-pi"><i><%= container :welcome_p2 %></i></p>
+            </div>
+          </div>
+        </div>
+      </div><!-- welcome-msg -->
+
+      <div id="proverb-main">
+        <div class="container">
+          <div class="row">
+            <div class="span12 proverb-main-center-txt">
+              <p class="proverb-main-p"><%= container :proverb_main_p %></p>
+            </div>
+          </div>
+        </div>
+      </div><!-- proverb-main -->
+
+<%= render :partial => 'partials/news' %>
+<%= render :partial => 'partials/sponsor' %>
+<%= render :partial => 'partials/foot' %>

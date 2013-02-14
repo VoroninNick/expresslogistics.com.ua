@@ -1,0 +1,179 @@
+
+
+
+<div class="container-fluid container-940">
+  <div class="row-fluid">
+    <div class="span12">
+
+      <div id="banner_j" class="">
+        <div class="sliderContent">
+          <div class="item first-slide">
+            <img src="<%= asset_path('el-banner-1.png') %>" alt=""/>
+            <div class="flex-info-block">
+              <% if cookies[:language] == "eng" %>
+                  <div class="flex-info-block-p">
+                    <p>cargo of any shape and size</p>
+                    <p>will transport by land</p>
+                    <p>to anywhere!</p>
+                  </div>
+              <% elsif cookies[:language] == "rus" %>
+                  <div class="flex-info-block-p">
+                    <p style="width: 392px;">Груз любой формы и размера</p>
+                    <p>перевезем по суши автотранспортом </p>
+                    <p style="width: 205px;">в любую точку!</p>
+                  </div>
+              <% elsif cookies[:language] == "ukr" %>
+                  <div class="flex-info-block-p">
+                    <p>вантаж будь-якої форми і розміру</p>
+                    <p>перевеземо по суші автотранспортом</p>
+                    <p>в будь-яку точку!</p>
+                  </div>
+              <% elsif cookies[:language] == "de" %>
+                  <div class="flex-info-block-p">
+                    <p>Груз любой формы и размера</p>
+                    <p>перевезем по суши автотранспортом </p>
+                    <p>в любую точку!</p>
+                  </div>
+              <% else %>
+                  <div class="flex-info-block-p">
+                    <p>Груз любой формы и размера</p>
+                    <p>перевезем по суши автотранспортом </p>
+                    <p>в любую точку!</p>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+          <!--<div class="item second-slide">-->
+            <!--<img src="<%#= asset_path('el-banner-3.png') %>" alt=""/>-->
+            <!--<div class="flex-info-block">-->
+              <!--<%# if cookies[:language] == "eng" %>-->
+                  <!--<div class="flex-info-block-p">-->
+                    <!--<p>quality and reliability of your cargo</p>-->
+                    <!--<p>transportation, doesn't matter how complicated is the route</p>-->
+                    <!--&lt;!&ndash;<p>to anywhere!</p>&ndash;&gt;-->
+                  <!--</div>-->
+              <!--<%# elsif cookies[:language] == "rus" %>-->
+                  <!--<div class="flex-info-block-p">-->
+                    <!--<p>качественно и надежно</p>-->
+                    <!--<p>перевезем Ваш груз,</p>-->
+                    <!--<p>независимо от сложности маршрута</p>-->
+                  <!--</div>-->
+              <!--<%# elsif cookies[:language] == "ukr" %>-->
+                  <!--<div class="flex-info-block-p">-->
+                    <!--<p>якісно та надійно</p>-->
+                    <!--<p>перевезем Ваш вантаж,</p>-->
+                    <!--<p>незалежно від складності маршруту</p>-->
+                  <!--</div>-->
+              <!--<%# elsif cookies[:language] == "de" %>-->
+                  <!--<div class="flex-info-block-p">-->
+                    <!--<p>качественно и надежно</p>-->
+                    <!--<p>перевезем Ваш груз,</p>-->
+                    <!--<p>независимо от сложности маршрута</p>-->
+                  <!--</div>-->
+              <!--<%# else %>-->
+                  <!--<p style="width: 392px;">Груз любой формы и размера</p>-->
+                  <!--<p>перевезем по суши автотранспортом </p>-->
+                  <!--<p style="width: 205px;">в любую точку!</p>-->
+              <!--<%# end %>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <div class="item third-slide">
+            <img src="<%= asset_path('el-banner-2.png') %>" alt=""/>
+            <div class="flex-info-block">
+
+              <% if cookies[:language] == "eng" %>
+                  <div class="flex-info-block-p">
+                    <p>fast and sensitive</p>
+                    <p>air delivery anywhere in the world</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% elsif cookies[:language] == "rus" %>
+                  <div class="flex-info-block-p">
+                    <p>быстрая и деликатная доставка</p>
+                    <p>небом в любую точку мира</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% elsif cookies[:language] == "ukr" %>
+                  <div class="flex-info-block-p">
+                    <p>швидка та делікатна доставка</p>
+                    <p>небом в будь-яку точку світу</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% elsif cookies[:language] == "de" %>
+                  <div class="flex-info-block-p">
+                    <p>быстрая и деликатная доставка</p>
+                    <p>небом в любую точку мира</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% else %>
+                  <div class="flex-info-block-p">
+                    <p>быстрая и деликатная доставка</p>
+                    <p>небом в любую точку мира</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% end %>
+            </div>
+          </div>
+
+
+          <div class="item last-slide">
+            <img src="<%= asset_path('el-banner-4a.png') %>" alt=""/>
+            <div class="flex-info-block">
+
+              <% if cookies[:language] == "eng" %>
+                  <div class="flex-info-block-p">
+                    <p>an economical way of transporting</p>
+                    <p>goods over long distances</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% elsif cookies[:language] == "rus" %>
+                  <div class="flex-info-block-p">
+                    <p>экономный способ транспортировки</p>
+                    <p>груза на большие расстояния</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% elsif cookies[:language] == "ukr" %>
+                  <div class="flex-info-block-p">
+                    <p>економний спосіб  транспортування</p>
+                    <p>вантажу на великі відстані</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% elsif cookies[:language] == "de" %>
+                  <div class="flex-info-block-p">
+                    <p>экономный способ транспортировки</p>
+                    <p>груза на большие расстояния</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% else %>
+                  <div class="flex-info-block-p">
+                    <p>экономный способ транспортировки</p>
+                    <p>груза на большие расстояния</p>
+                    <!--<p>в любую точку!</p>-->
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="banner-small">
+  <div class="container">
+    <div class="row">
+      <div class="span12 img-banner-small">
+        <img src="<%= asset_path('el-logo-big.png') %>" alt="" class="">
+      </div>
+    </div>
+  </div>
+</div>

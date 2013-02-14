@@ -1,0 +1,342 @@
+<!DOCTYPE>
+<html lang="uk">
+  <head>
+    <!--[if lte IE 8]><script src="http://phpbbex.com/oldies/oldies.js" charset="utf-8"></script><![endif]-->
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Заказать</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="studio" content="Дизайн студія Миколи Вороніна" />
+    <meta name="art-director" content="Микола Воронін" />
+    <meta name="web-developer" content="Калантаєвській Віктор" />
+    <meta name="studio-url" content="http://voroninstudio.eu" />
+    <meta name="envirment" content="production" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="language" content="english">
+    <link rel="icon" href="/assets/favicon-64d52a6daf697a82ebce4f7f28e174ae.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/favicon-64d52a6daf697a82ebce4f7f28e174ae.ico" type="image/x-icon">
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="KoY5TjHGwTalhbIlBPQHmHIfjdG7VAEhTdpqxcDfkCk=" name="csrf-token" />
+    
+  <meta name="generator" content="BrowserCMS 3.5.3"/>
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="/assets/application-a31ab41c7da4f34758acb5d301062ed7.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-92336c0c9827dbfaed7800e6b96d7361.js" type="text/javascript"></script>
+
+    <!--
+      #Content for helper templates :head
+    -->
+    <!-- script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <!--[if lt IE 9]>
+          <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+          <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("ul.head-menu li.li-about-us").hover(function() {
+          $(".hover-eff-about-us").show();
+          $(".hover-eff-about-us img").effect("bounce", { direction:'up', times:2, distance:8 }, 450);
+        },function(){
+          $(".hover-eff-about-us").hide();
+        });
+
+        $("ul.head-menu li.li-about-us, .hover-eff-about-us").click(function() {
+          window.location.href = "/about";
+        });
+
+
+        $("ul.head-menu li.li-services").hover(function() {
+          $(".hover-eff-services").show();
+          $(".hover-eff-services img").effect("bounce", { direction:'up', times:2, distance:8 }, 450);
+        },function(){
+          $(".hover-eff-services").hide();
+        });
+
+        $("ul.head-menu li.li-services, .hover-eff-services").click(function() {
+          window.location.href = "/services";
+        });
+
+        $("ul.head-menu li.li-contact").hover(function() {
+        $(".hover-eff-contact").show();
+        $(".hover-eff-contact img").effect("bounce", { direction:'up', times:4, distance:8 }, 450);
+        },function(){
+        $(".hover-eff-contact").hide();
+        });
+
+        $("ul.head-menu li.li-contact, .hover-eff-contact").click(function() {
+          window.location.href = "/contact-us";
+        });
+
+        $("#eng").click(function() {
+          $.cookie('language', 'eng', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $("#rus").click(function() {
+          $.cookie('language', 'rus', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $("#de").click(function() {
+          $.cookie('language', 'de', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $("#ua").click(function() {
+          $.cookie('language', 'ukr', { expires: 30, path: '/' });
+          window.location.reload();
+        });
+
+        $(".fancybox").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+
+
+
+      });
+    </script>
+  </head>
+  <body data-envariment="production" data-api="275b81ff63">
+    
+    
+
+    <div id="wrap">
+    <div id="main" class="clearfix">
+      <div id="header" class="clearfix">
+        <div class="container">
+        <div class="row">
+        <div class="span4" id="logo">
+          <a href="/" title="">
+            <img src="/assets/el-logo-big-8f17a7ad0329ed9ccff10e5a17935a3a.png" alt="" class="logo-940">
+          </a>
+        </div>
+        <!-- span4 -->
+        <div class="span8" id="nav">
+          <ul class="head-menu">
+            <!-- About page -->
+            <li class="li-about-us fake" id="eng-li-about-us">
+              <a href="/about" title="About">
+                <span class="hover-eff-about-us" id="eng-hover-eff-about-us">
+                  <img src=" /assets/hover-head-menu-e570416a68cca0e0f8581fafd38496c1.png" alt="About">
+                </span>
+                About
+              </a>
+            </li>
+
+            <!-- /About page -->
+
+
+            <!-- Parks page -->
+            
+            
+            <!-- /Parks page -->
+
+            <!-- Services page -->
+            <li class="li-services fake" id="eng-li-services">
+              <a href="/services" title="Services">
+                <span class="hover-eff-services" id="eng-hover-eff-services">
+                  <img src="/assets/hover-head-menu-e570416a68cca0e0f8581fafd38496c1.png" alt="Services">
+                </span>
+                services
+              </a>
+            </li>
+            <!-- /Services page -->
+
+            <!-- About page -->
+            <li class="li-our-park active-list" id="eng-li-our-park">
+              <a href="#" title="Orders">
+                <span class="hover-eff-our-park" id="eng-hover-eff-our-park">
+                  <img src=" /assets/hover-head-menu-e570416a68cca0e0f8581fafd38496c1.png" alt="Orders">
+                </span>
+                Order
+              </a>
+            </li>
+
+            <!-- /About page -->
+
+            <!-- Contact page -->
+            <li class="li-contact fake eng-li-contact">
+              <a href="/contact-us" title="Contacts">
+                <span class="hover-eff-contact eng-hover-eff-contact">
+                  <img src="/assets/hover-head-menu-e570416a68cca0e0f8581fafd38496c1.png" alt="Contacts">
+                </span>
+                CONTACTS
+              </a>
+            </li>
+            <!-- /Contact page -->
+          </ul>
+        </div>
+        </div>
+        </div>
+      </div><!-- header -->
+
+<div id="services" class="background-randoms">
+  <div class="container info-bar">
+  <div class="row">
+      <div class="span6 breadcrumbs">
+      //&nbsp;<span class="proper-info-links info-link-orange"><a href="/" class="bread-link">Home</a></span>
+      &nbsp;/&nbsp;<span class="proper-info-links active-bread"><a class="bread-link">Order</a></span>
+    </div>
+    <div class="span6 lang">
+
+      <span  id="eng_" class="lang-bars lang-act" title="English language">ENG</span>
+      <span  id="rus" class="lang-bars" title="Русский язык">RUS</span>
+      <span  id="ua" class="lang-bars" title="Україньска мова">UA</span>
+      <span  id="de" class="lang-bars" title="Deutsch language">DE</span>
+    </div>
+  </div>
+</div><!-- info bar -->
+  <div class="container service-proverb">
+    <div class="row">
+      <div class="span8">
+        <h2 class="services-h2">
+      Order Form
+
+</h2>
+        <p class="services-p">
+      Fill in the form below to order services:
+
+</p>
+      </div>
+    </div>
+  </div> <!-- container service-proverb -->
+  <div class="container service-listing">
+
+      <style type="text/css">
+        .get-back-tous > p{
+          float: left;
+          width: 970px;
+          height: 75px;
+        }
+
+        .get-back-tous p > label{
+          padding-left: 15px;
+        }
+
+        .get-back-tous p.third-glue{
+          width: 310px !important;
+          margin-right: 20px;
+        }
+
+        .get-back-tous p.third-glue.last{
+          margin-right: 0;
+        }
+        .get-text, .get-text > textarea{
+          height: 240px !important;
+        }
+      </style>
+
+    <div class="row">
+      <div class="span10 get-back-tous">
+        <!--<h2 class="services-h2">Заказать</h2>-->
+        <p>
+          <input type="text" id="name" placeholder="ТзОВ «Транс-Сервіс-1»" autofocus>
+          <label for="name">Назва фірми – замовника :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="Михаил Михаиловичь">
+          <label for="">Контактна особа :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="Фура">
+          <label for="">Тип транспортного засобу :</label>
+        </p>
+        <p>
+          <input type="text" style="width: 48%;" placeholder="Львов"> &nbsp;&mdash;&nbsp; <input type="text" style="width: 48%;" placeholder="Киев">
+          <label for="">Маршрут перевезення (Звідки&nbsp;&mdash;&nbsp;куди) :</label>
+        </p>
+
+        <p class="third-glue">
+          <input type="text" placeholder="15 км">
+          <label for="">Відстань перевезення :</label>
+        </p>
+        <p class="third-glue">        
+          <input type="text" placeholder="120 л">
+          <label for="">Об'єм перевезення :</label>
+        </p>
+        <p class="third-glue last">
+          <input type="date" placeholder="23/01/2013">
+           <label for="">Орієнтовна дата перевезення :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="+38 (050) 000 000 00">
+          <label for="">Контактний телефон * :</label>
+        </p>
+        <p>
+          <input type="text" placeholder="support@service.com">
+          <label for="">E-mail :</label>
+        </p>
+        <p class="get-text">
+          <textarea ></textarea>
+          <label for="">Додаткові побажання замовника :</label>
+        </p>
+        <div style="text-align: right;float: right;"><a href="#"><img src="assets/send.png" alt=""></a></div>
+      </div>
+    </div>
+  </div> <!-- container service-listing -->
+</div>
+
+    <div id="sponsors-list">
+  <div class="container">
+    <div class="row">
+        <div class="span3 sponsors-each">
+          <a href="" class="sponsor-link-d" title="Еко Ват">
+            <img alt="El-web-main-1144px-v2-2a_09" class="" src="/attachments/5/el-web-main-1144px-v2-2a_09.png" style="" />
+          </a>
+        </div>
+        <div class="span3 sponsors-each">
+          <a href="http://trans-service-1.com/" class="sponsor-link-d" title="Trans Service">
+            <img alt="El-web-main-1144px-v2-2a_07" class="" src="/attachments/3/el-web-main-1144px-v2-2a_07.png" style="" />
+          </a>
+        </div>
+        <div class="span3 sponsors-each">
+          <a href="http://www.oliyar.com.ua/" class="sponsor-link-d" title="Олияр">
+            <img alt="El-web-main-1144px-v2-2a_05" class="" src="/attachments/2/el-web-main-1144px-v2-2a_05.png" style="" />
+          </a>
+        </div>
+        <div class="span3 sponsors-each">
+          <a href="http://www.majola.ua/" class="sponsor-link-d" title="Майола">
+            <img alt="El-web-main-1144px-v2-2a_03" class="" src="/attachments/1/el-web-main-1144px-v2-2a_03.png" style="" />
+          </a>
+        </div>
+    </div>
+  </div>
+</div><!-- sponsors-list -->
+
+  </div><!-- main -->
+  </div><!-- wrap -->
+  <div id="footer" class="container">
+    <div class="row">
+      <div class="span6">
+        <p class="copyrigths">
+            &copy; 2012 «Expres Logistic». All rights reserved.
+        </p>
+        <div class="copy-studio">
+          <img src=" /assets/vs-logo-24692e9b0fa03955fd02d1ae9de217f4.png" alt="">
+          <p>
+            Made in  <a href="http://voroninstudio.eu">Voronin Design Studio</a> <br>
+            <a href="http://voroninstudio.eu">About site</a>
+          </p>
+        </div>
+      </div>
+      <div class="span6">
+        <ul class="foot-menu">
+            <li><a href="/about"><span class="proper-link">about</a></span></li>
+            <li><a href="/orders"><span class="proper-link">orders</a></span></li>
+            <li><a href="/services"><span class="proper-link">services</a></span></li>
+            <li><a href="/news"><span class="proper-link">news</a></span></li>
+            <li><a href="/contact-us"><span class="proper-link">contacts</a></span></li>
+        </ul>
+        <div class="foot-contacts">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
