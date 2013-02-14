@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130214140434) do
+ActiveRecord::Schema.define(:version => 20130214173312) do
 
   create_table "article_versions", :force => true do |t|
     t.integer  "original_record_id"
@@ -387,6 +387,10 @@ ActiveRecord::Schema.define(:version => 20130214140434) do
     t.string   "version_comment"
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
+    t.string   "name_rus"
+    t.string   "name_ukr"
+    t.string   "name_eng"
+    t.string   "name_de"
   end
 
   create_table "managers", :force => true do |t|
@@ -402,6 +406,10 @@ ActiveRecord::Schema.define(:version => 20130214140434) do
     t.boolean  "archived",      :default => false
     t.integer  "created_by_id"
     t.integer  "updated_by_id"
+    t.string   "name_rus"
+    t.string   "name_ukr"
+    t.string   "name_eng"
+    t.string   "name_de"
   end
 
   create_table "order_forms", :force => true do |t|
