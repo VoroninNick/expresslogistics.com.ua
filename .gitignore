@@ -7,6 +7,8 @@ tmp/data/*
 tmp/pids/*
 tmp/sessions/*
 tmp/sockets/*
+public/cache/*
+tmp/restart.txt
 doc/api
 doc/app
 *.swp
