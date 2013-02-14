@@ -8,8 +8,8 @@ bundle install
 
 echo 'Pushing data to local database'
 echo 'Migration'
-rake db:migrate
+rake db:migrate RAILS_ENV="production"
 
 echo 'Dumping'
-db:data:load
+rake db:data:load RAILS_ENV="production"
 
