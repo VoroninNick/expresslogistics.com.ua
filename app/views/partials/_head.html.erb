@@ -93,7 +93,35 @@
     <% end %>
     <script type="text/javascript">
       $(document).ready(function() {
-        <% if current_page.path != '/about' %>
+        
+
+	$('.service-list-car').click( function(){
+	  window.location.href = "/services/18";
+	});
+
+	$('.service-list-bag').click( function(){
+          window.location.href = "/services/17";
+        });
+
+	$('.service-list-water').click( function(){
+          window.location.href = "/services/16";
+        });
+
+	$('.service-list-train').click( function(){
+          window.location.href = "/services/15";
+        });
+
+	$('.service-list-air').click( function(){
+          window.location.href = "/services/14";
+        });
+
+	$('.service-list-letter').click( function(){
+          window.location.href = "/services/13";
+        });
+
+
+
+	<% if current_page.path != '/about' %>
         $("ul.head-menu li.li-about-us").hover(function() {
           $(".hover-eff-about-us").show();
           $(".hover-eff-about-us img").effect("bounce", { direction:'up', times:2, distance:8 }, 450);
