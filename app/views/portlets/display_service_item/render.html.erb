@@ -3,7 +3,7 @@
   <div class="container news-item-pad">
     <div class="row">
       <div class="span4 news-item-make-full">
-        <%= image_tag(@service_item.icon_main.url(:main), :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name_eng}") %>
+        <%= image_tag(@service_item.icon_main.url, :class => "news-item-img", :style => "border: 0 !important;", :alt => "#{@service_item.name_eng}") %>
       </div>
       <div class="span8 news-item-make-full">
         <h1 class="news-item-h1"><%= @service_item.name_eng %></h1>
